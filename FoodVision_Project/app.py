@@ -20,7 +20,7 @@ effnetb2, effnetb2_transforms = create_effnetb2_model(
 # Load saved weights
 effnetb2.load_state_dict(
     torch.load(
-        f="09_pretrained_effnetb2_feature_extractor_pizza_steak_sushi_20_percent.pth",
+        f="FoodVision_Project\07_effnetb2_data_20_percent_10_epochs.pth",
         map_location=torch.device("cpu"),  # load to CPU
     )
 )
