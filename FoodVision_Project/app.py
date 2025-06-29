@@ -20,7 +20,7 @@ effnetb2, effnetb2_transforms = create_effnetb2_model(
 # Load saved weights
 effnetb2.load_state_dict(
     torch.load(
-        f="FoodVision_Project\07_effnetb2_data_20_percent_10_epochs.pth",
+        f="/home/praveent/FoodVision/FoodVision_Project/07_effnetb2_data_20_percent_10_epochs.pth",
         map_location=torch.device("cpu"),  # load to CPU
     )
 )
@@ -60,7 +60,7 @@ description = "An EfficientNetB2 feature extractor computer vision model to clas
 article = "Created at [FoodVision PyTorch Model Deployment](https://www.learnpytorch.io/09_pytorch_model_deployment/)."
 
 # Create examples list from "examples/" directory
-example_list = [["examples/" + example] for example in os.listdir("examples")]
+example_list = [["FoodVision_Project/examples/" + example] for example in os.listdir("/home/praveent/FoodVision/FoodVision_Project/examples")]
 
 # Create the Gradio demo
 demo = gr.Interface(fn=predict, # mapping function from input to output
